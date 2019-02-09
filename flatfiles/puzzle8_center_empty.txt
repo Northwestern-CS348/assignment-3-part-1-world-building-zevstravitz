@@ -22,3 +22,28 @@ fact: (movable tile2 pos2 pos1 pos2 pos2)
 fact: (movable tile8 pos1 pos2 pos2 pos2)
 fact: (movable tile6 pos2 pos3 pos2 pos2)
 fact: (movable tile4 pos3 pos2 pos2 pos2)
+
+fact: (adj tile1 tile2)
+fact: (adj tile1 tile8)
+
+fact: (adj tile2 tile1)
+fact: (adj tile2 tile3)
+
+fact: (adj tile3 tile2)
+fact: (adj tile3 tile4)
+
+fact: (adj tile4 tile3)
+fact: (adj tile4 tile5)
+
+fact: (adj tile5 tile4)
+fact: (adj tile5 tile6)
+
+fact: (adj tile6 tile5)
+fact: (adj tile6 tile7)
+
+fact: (adj tile7 tile6)
+fact: (adj tile7 tile8)
+
+fact: (adj tile8 tile1)
+fact: (adj tile8 tile7)
+
