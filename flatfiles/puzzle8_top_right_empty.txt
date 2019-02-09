@@ -18,12 +18,23 @@ rule: ((pred obj1 obj2) (pred obj2 obj3)) -> (pred obj1 obj3)
 
 """
 
-####FACTS
+#______________________FACTS_______________________
 
+# (movable t p1x p1y p2x p2y) => tile t is movable from (p1x p1y) to (p2x p2y)
 fact: (movable tile4 pos2 pos1 pos3 pos1)
 fact: (movable tile8 pos3 pos2 pos3 pos1)
 
-# (adj tile1 tile2) implies that tile1 and tile2 are adjacent
+# (posn t x y) => tile t is at block (x,y)
+fact: (posn tile1 pos2 pos2)
+fact: (posn tile2 pos3 pos3)
+fact: (posn tile3 pos2 pos3)
+fact: (posn tile4 pos2 pos1)
+fact: (posn tile5 pos1 pos1)
+fact: (posn tile6 pos1 pos2)
+fact: (posn tile7 pos1 pos3)
+fact: (posn tile8 pos3 pos2)
+
+# (adj t1 t2) => tile t1 and tile t2 are adjacent
 fact: (adj tile1 tile4)
 fact: (adj tile1 tile6)
 fact: (adj tile1 tile3)
@@ -52,13 +63,7 @@ fact: (adj tile7 tile6)
 fact: (adj tile8 tile1)
 fact: (adj tile8 tile2)
 
-# (empty posx posy) means the tile at posx and posy is empty
+# (empty posx posy) => block at posx and posy is empty
 fact: (empty pos3 pos1)
 
-# (hasatwo
-
-
-
-
-#rule: (adj ?x ?y) -> (adj ?y ?x)
-
+#______________________RULES_______________________

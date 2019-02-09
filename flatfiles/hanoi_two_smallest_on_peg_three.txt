@@ -20,6 +20,7 @@ rule: ((pred obj1 obj2) (pred obj2 obj3)) -> (pred obj1 obj3)
 
 """
 # One with the two smallest disks on the last peg and the others on the first.
+
 #______________________FACTS_______________________
 # (on d p) => disk d is on peg p
 fact: (on disk1 peg3)
